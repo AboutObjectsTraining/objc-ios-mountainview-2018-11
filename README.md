@@ -2,7 +2,7 @@
 <a href="https://www.aboutobjects.com"><img src="ao-logo.png" height=18 style="height: 18px;"/></a>
 </div>
 
-# objc-ios-google-2018-11
+# objc-ios-mountainview-2018-11
 
 ## iOS Development in Objective-C
 
