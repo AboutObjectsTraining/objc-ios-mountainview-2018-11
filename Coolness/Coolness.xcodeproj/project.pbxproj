@@ -12,6 +12,8 @@
 		AB096A2121AE1056001E5D10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB096A1F21AE1056001E5D10 /* LaunchScreen.storyboard */; };
 		AB096A2421AE1056001E5D10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB096A2321AE1056001E5D10 /* main.m */; };
 		AB096A2C21AE1F2C001E5D10 /* CoolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB096A2B21AE1F2C001E5D10 /* CoolCell.m */; };
+		AB096A2F21AF1D5B001E5D10 /* CoolController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB096A2E21AF1D5B001E5D10 /* CoolController.m */; };
+		AB096A5921B030B5001E5D10 /* UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB096A5821B030B4001E5D10 /* UnitTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +26,22 @@
 		AB096A2321AE1056001E5D10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB096A2A21AE1F2C001E5D10 /* CoolCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolCell.h; sourceTree = "<group>"; };
 		AB096A2B21AE1F2C001E5D10 /* CoolCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoolCell.m; sourceTree = "<group>"; };
+		AB096A2D21AF1D5B001E5D10 /* CoolController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolController.h; sourceTree = "<group>"; };
+		AB096A2E21AF1D5B001E5D10 /* CoolController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoolController.m; sourceTree = "<group>"; };
+		AB096A4E21B02F9C001E5D10 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB096A5221B02F9C001E5D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB096A5821B030B4001E5D10 /* UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AB096A0E21AE1054001E5D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB096A4B21B02F9C001E5D10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				AB096A1321AE1054001E5D10 /* Coolness */,
+				AB096A4F21B02F9C001E5D10 /* UnitTests */,
 				AB096A1221AE1054001E5D10 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				AB096A1121AE1054001E5D10 /* Coolness.app */,
+				AB096A4E21B02F9C001E5D10 /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,12 +76,23 @@
 				AB096A1521AE1054001E5D10 /* AppDelegate.m */,
 				AB096A2A21AE1F2C001E5D10 /* CoolCell.h */,
 				AB096A2B21AE1F2C001E5D10 /* CoolCell.m */,
+				AB096A2D21AF1D5B001E5D10 /* CoolController.h */,
+				AB096A2E21AF1D5B001E5D10 /* CoolController.m */,
 				AB096A1D21AE1056001E5D10 /* Assets.xcassets */,
 				AB096A1F21AE1056001E5D10 /* LaunchScreen.storyboard */,
 				AB096A2221AE1056001E5D10 /* Info.plist */,
 				AB096A2321AE1056001E5D10 /* main.m */,
 			);
 			path = Coolness;
+			sourceTree = "<group>";
+		};
+		AB096A4F21B02F9C001E5D10 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB096A5821B030B4001E5D10 /* UnitTests.m */,
+				AB096A5221B02F9C001E5D10 /* Info.plist */,
+			);
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +115,23 @@
 			productReference = AB096A1121AE1054001E5D10 /* Coolness.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AB096A4D21B02F9C001E5D10 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB096A5321B02F9C001E5D10 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				AB096A4A21B02F9C001E5D10 /* Sources */,
+				AB096A4B21B02F9C001E5D10 /* Frameworks */,
+				AB096A4C21B02F9C001E5D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = AB096A4E21B02F9C001E5D10 /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +142,9 @@
 				ORGANIZATIONNAME = "About Objects";
 				TargetAttributes = {
 					AB096A1021AE1054001E5D10 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					AB096A4D21B02F9C001E5D10 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -116,6 +163,7 @@
 			projectRoot = "";
 			targets = (
 				AB096A1021AE1054001E5D10 /* Coolness */,
+				AB096A4D21B02F9C001E5D10 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +178,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AB096A4C21B02F9C001E5D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,9 +192,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB096A2F21AF1D5B001E5D10 /* CoolController.m in Sources */,
 				AB096A2421AE1056001E5D10 /* main.m in Sources */,
 				AB096A1621AE1054001E5D10 /* AppDelegate.m in Sources */,
 				AB096A2C21AE1F2C001E5D10 /* CoolCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB096A4A21B02F9C001E5D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB096A5921B030B5001E5D10 /* UnitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +367,40 @@
 			};
 			name = Release;
 		};
+		AB096A5421B02F9C001E5D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7J7LD9SB6Q;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB096A5521B02F9C001E5D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7J7LD9SB6Q;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -320,6 +418,15 @@
 			buildConfigurations = (
 				AB096A2821AE1056001E5D10 /* Debug */,
 				AB096A2921AE1056001E5D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB096A5321B02F9C001E5D10 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB096A5421B02F9C001E5D10 /* Debug */,
+				AB096A5521B02F9C001E5D10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
