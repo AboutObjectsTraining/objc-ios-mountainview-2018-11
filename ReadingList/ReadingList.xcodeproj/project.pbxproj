@@ -12,6 +12,10 @@
 		AB4E58DE21B0C7F00050FF62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4E58DD21B0C7F00050FF62 /* Assets.xcassets */; };
 		AB4E58E121B0C7F00050FF62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4E58DF21B0C7F00050FF62 /* LaunchScreen.storyboard */; };
 		AB4E58E421B0C7F00050FF62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4E58E321B0C7F00050FF62 /* main.m */; };
+		AB4E58EC21B1CEB50050FF62 /* ReadingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4E58EB21B1CEB50050FF62 /* ReadingListController.m */; };
+		AB4E58EF21B1D2270050FF62 /* BookDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4E58EE21B1D2270050FF62 /* BookDetailController.m */; };
+		AB4E58F221B1D7320050FF62 /* EditBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4E58F021B1D7320050FF62 /* EditBook.storyboard */; };
+		AB4E58F421B1DA140050FF62 /* AddBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4E58F321B1DA140050FF62 /* AddBook.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,12 @@
 		AB4E58E021B0C7F00050FF62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB4E58E221B0C7F00050FF62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB4E58E321B0C7F00050FF62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB4E58EA21B1CEB50050FF62 /* ReadingListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadingListController.h; sourceTree = "<group>"; };
+		AB4E58EB21B1CEB50050FF62 /* ReadingListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadingListController.m; sourceTree = "<group>"; };
+		AB4E58ED21B1D2270050FF62 /* BookDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookDetailController.h; sourceTree = "<group>"; };
+		AB4E58EE21B1D2270050FF62 /* BookDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookDetailController.m; sourceTree = "<group>"; };
+		AB4E58F121B1D7320050FF62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ReadingList/Base.lproj/EditBook.storyboard; sourceTree = "<group>"; };
+		AB4E58F321B1DA140050FF62 /* AddBook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddBook.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,12 @@
 			children = (
 				AB4E58D421B0C7EF0050FF62 /* AppDelegate.h */,
 				AB4E58D521B0C7EF0050FF62 /* AppDelegate.m */,
+				AB4E58EA21B1CEB50050FF62 /* ReadingListController.h */,
+				AB4E58EB21B1CEB50050FF62 /* ReadingListController.m */,
+				AB4E58ED21B1D2270050FF62 /* BookDetailController.h */,
+				AB4E58EE21B1D2270050FF62 /* BookDetailController.m */,
+				AB4E58F321B1DA140050FF62 /* AddBook.storyboard */,
+				AB4E58F021B1D7320050FF62 /* EditBook.storyboard */,
 				AB4E58DA21B0C7EF0050FF62 /* Main.storyboard */,
 				AB4E58DD21B0C7F00050FF62 /* Assets.xcassets */,
 				AB4E58DF21B0C7F00050FF62 /* LaunchScreen.storyboard */,
@@ -126,6 +142,8 @@
 				AB4E58E121B0C7F00050FF62 /* LaunchScreen.storyboard in Resources */,
 				AB4E58DE21B0C7F00050FF62 /* Assets.xcassets in Resources */,
 				AB4E58DC21B0C7EF0050FF62 /* Main.storyboard in Resources */,
+				AB4E58F421B1DA140050FF62 /* AddBook.storyboard in Resources */,
+				AB4E58F221B1D7320050FF62 /* EditBook.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +156,8 @@
 			files = (
 				AB4E58E421B0C7F00050FF62 /* main.m in Sources */,
 				AB4E58D621B0C7EF0050FF62 /* AppDelegate.m in Sources */,
+				AB4E58EC21B1CEB50050FF62 /* ReadingListController.m in Sources */,
+				AB4E58EF21B1D2270050FF62 /* BookDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +178,14 @@
 				AB4E58E021B0C7F00050FF62 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AB4E58F021B1D7320050FF62 /* EditBook.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB4E58F121B1D7320050FF62 /* Base */,
+			);
+			name = EditBook.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
