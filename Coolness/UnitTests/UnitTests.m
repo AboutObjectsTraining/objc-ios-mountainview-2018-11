@@ -21,6 +21,8 @@ void Speak(void (^block)(void)) {
 
 @implementation UnitTests
 
+- (NSString *)text { return @"Hi there!"; }
+
 - (void)testFunctionPointer {
     void (*myFunctionPointer)(void) = SayHello;
     myFunctionPointer();
@@ -36,11 +38,18 @@ void Speak(void (^block)(void)) {
     };
     
     myBlockLiteral();
+    
+    void (^copyOfBlock)(void) = [myBlockLiteral copy];
+    copyOfBlock();
 }
 
 - (void)testBlockLiteralAsParameter {
+    char *foo = "Foo";
+    
+    typeof(self) __weak weakSelf = self;
     Speak(^{
-        printf("Wheee!!!\n");
+        typeof(self) strongSelf = weakSelf;
+        printf("Wheee!!! %s, %s\n", foo, [strongSelf text].UTF8String);
     });
 }
 

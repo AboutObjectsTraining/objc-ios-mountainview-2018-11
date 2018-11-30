@@ -3,10 +3,12 @@
 UIEdgeInsets TextInsets = { .top = 8, .left = 14, .bottom = 9, .right = 14 };
 CGPoint TextOrigin = { 14, 8 };
 
+IB_DESIGNABLE
 @interface CoolCell ()
-
 @property (nonatomic, getter=isHighlighted) BOOL highlighted;
 @property (nonatomic, readonly) NSDictionary *textAttributes;
+
+@property (nonatomic) IBInspectable CGFloat borderWidth;
 
 @end
 
@@ -21,7 +23,13 @@ CGPoint TextOrigin = { 14, 8 };
     return self;
 }
 
-// TODO: implement initWithCoder:
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (!(self = [super initWithCoder:aDecoder])) return nil;
+    [self configureLayer];
+    [self configureGestureRecognizers];
+    return self;
+}
 
 - (void)configureLayer {
     self.layer.cornerRadius = 10.0;
@@ -44,6 +52,13 @@ CGPoint TextOrigin = { 14, 8 };
 - (void)setHighlighted:(BOOL)highlighted {
     _highlighted = highlighted;
     self.alpha = highlighted ? 0.5 : 1.0;
+}
+
+- (CGFloat)borderWidth {
+    return self.layer.borderWidth;
+}
+- (void)setBorderWidth:(CGFloat)borderWidth {
+    self.layer.borderWidth = borderWidth;
 }
 
 // MARK: - Animation
@@ -75,6 +90,10 @@ CGPoint TextOrigin = { 14, 8 };
 
 
 // MARK: - Drawing and resizing
+
+- (CGSize)intrinsicContentSize {
+    return [self sizeThatFits:CGSizeZero];
+}
 
 - (CGSize)sizeThatFits:(CGSize)size {
     CGSize newSize = [self.text sizeWithAttributes:self.textAttributes];
