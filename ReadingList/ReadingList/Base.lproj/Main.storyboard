@@ -12,13 +12,13 @@
         <!--My Reading List-->
         <scene sceneID="U2b-Tg-IxV">
             <objects>
-                <tableViewController id="GW2-X7-3wA" customClass="ReadingListController" sceneMemberID="viewController">
+                <tableViewController id="GW2-X7-3wA" customClass="RELReadingListController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="6jz-5v-jJQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="r02-qR-Yzt" detailTextLabel="m1f-XX-20z" style="IBUITableViewCellStyleSubtitle" id="gpX-Pa-hce">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Book" textLabel="r02-qR-Yzt" detailTextLabel="m1f-XX-20z" style="IBUITableViewCellStyleSubtitle" id="gpX-Pa-hce">
                                 <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gpX-Pa-hce" id="PLK-xo-a04">
@@ -45,34 +45,10 @@
                                     <segue destination="S17-oI-Xlc" kind="show" id="DbV-29-gSL"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="HOq-5I-TF4" detailTextLabel="V0S-Ni-ZLk" style="IBUITableViewCellStyleSubtitle" id="iKA-bI-Hwh">
-                                <rect key="frame" x="0.0" y="115.33333333333334" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iKA-bI-Hwh" id="223-Ne-jNV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="The Taming of the Shrew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HOq-5I-TF4">
-                                            <rect key="frame" x="16" y="9.9999999999999982" width="191" height="20.333333333333332"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="2001  William Shakespeare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V0S-Ni-ZLk">
-                                            <rect key="frame" x="16" y="33.333333333333329" width="151.66666666666666" height="14.333333333333334"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="GW2-X7-3wA" id="j1C-my-Axr"/>
+                            <outlet property="dataSource" destination="bk3-y9-wON" id="11F-aU-3nw"/>
                             <outlet property="delegate" destination="GW2-X7-3wA" id="RHz-xM-qwW"/>
                         </connections>
                     </tableView>
@@ -83,15 +59,24 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dataSource" destination="bk3-y9-wON" id="Kbx-WR-7Uv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4D-0p-d0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="pIG-Fr-EeQ" customClass="RLMStoreController"/>
+                <customObject id="bk3-y9-wON" customClass="RELDataSource">
+                    <connections>
+                        <outlet property="storeController" destination="pIG-Fr-EeQ" id="aFH-V3-CV6"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="409" y="55"/>
         </scene>
         <!--Book Detail-->
         <scene sceneID="Jh6-5a-5va">
             <objects>
-                <tableViewController id="S17-oI-Xlc" customClass="BookDetailController" sceneMemberID="viewController">
+                <tableViewController id="S17-oI-Xlc" customClass="RELBookDetailController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hJs-oJ-gqq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,6 +199,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="firstNameLabel" destination="XK8-w9-APN" id="Yy7-qD-2lF"/>
+                        <outlet property="lastNameLabel" destination="AZp-dM-hnM" id="38k-K7-cHv"/>
+                        <outlet property="titleLabel" destination="zI2-WC-2aH" id="PqX-H5-Xzc"/>
+                        <outlet property="yearLabel" destination="hdb-ib-wYW" id="4Nd-bw-9kw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXI-Z8-7IQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
